@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    {{$task}}
-    {{"And the index : (". $id . ")"}}
+    <h1>{{$tasks->name}}</h1>
 </body>
 </html>

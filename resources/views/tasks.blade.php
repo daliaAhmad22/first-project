@@ -8,12 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome</h1>
-        @foreach($tasks as $key => $task)
-            <ul>
-                <li><a href=" {{'show/'.$key }} ">{{$task}}</a></li>
-            </ul>
+        @foreach($tasks as $index => $task)
+            <li><a href="tasks/{{$task->id}}">{{$task->name}}</a></li>
         @endforeach
-
 </body>
 </html>
