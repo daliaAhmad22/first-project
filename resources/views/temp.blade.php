@@ -54,18 +54,27 @@
                                 <td>
                                     <form action="{{url('delete/'.$task->id)}}" method="POST">
                                         @csrf
+                                        @method('DELETE')
                                         <button type="submit" class="btn btn-danger">
                                             <i class="fa fa-btn fa-trash"></i>Delete
+                                        </button>
+                                    </form> 
+                                </td>
+                                    <!-- Update -->
+                                <td>
+                                    <form action="{{url('update/'.$task->id)}}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-info">
+                                            <i class="fa fa-btn fa-info"></i>Update
                                         </button>
                                     </form>
                                 </td>
                             </tr>
                             @endforeach
-
-
                         </tbody>
                     </table>
                 </div>
+
             </div>
     </div>
 </div>
